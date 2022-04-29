@@ -5,4 +5,14 @@
  * to customize this service
  */
 
-module.exports = {};
+const axios = require('axios')
+
+module.exports = {
+    populate: async (params) => {
+        const category = await strapi.services.category.find({ name: 'Action' })
+
+        console.log(category)
+
+        // data = await axios('')
+    }
+};
